@@ -1,0 +1,70 @@
+%SIGNAL
+PIN  23 =  L0 
+PIN  22 =  L1 
+PIN  21 =  L2 
+PIN  20 =  L3 
+PIN  19 =  L4 
+PIN  18 =  L5 
+PIN  17 =  L6 
+PIN  16 =  L7 
+PIN   5 =  Q0 
+PIN   4 =  Q1 
+PIN   3 =  Q2 
+PIN   2 =  Q3 
+%END
+
+%FIELD
+FIELD ENTRADA = Q0,Q1,Q2,Q3
+FIELD SALIDA = L7,L6,L5,L4,L3,L2,L1,L0
+%END
+
+%EQUATION
+L0 =>
+    !Q0 & !Q1 & !Q2 & Q3
+
+L1 =>
+    Q0 & Q1 & Q2 & !Q3
+
+L2 =>
+    !Q0 & Q1 & Q2 & !Q3
+
+L3 =>
+    Q0 & !Q1 & Q2 & !Q3
+
+L4 =>
+    !Q0 & !Q1 & Q2 & !Q3
+
+L5 =>
+    Q0 & Q1 & !Q2 & !Q3
+
+L6 =>
+    !Q0 & Q1 & !Q2 & !Q3
+
+L7 =>
+    Q0 & !Q1 & !Q2 & !Q3
+
+L0.oe  =>
+    1 
+
+L1.oe  =>
+    1 
+
+L2.oe  =>
+    1 
+
+L3.oe  =>
+    1 
+
+L4.oe  =>
+    1 
+
+L5.oe  =>
+    1 
+
+L6.oe  =>
+    1 
+
+L7.oe  =>
+    1 
+
+%END

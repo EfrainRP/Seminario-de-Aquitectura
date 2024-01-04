@@ -1,0 +1,68 @@
+%SIGNAL
+PIN   5 =  A0 
+PIN   4 =  A1 
+PIN   3 =  A2 
+PIN   2 =  A3 
+PIN  23 =  L1 
+PIN  22 =  L2 
+PIN  21 =  L3 
+PIN  20 =  L4 
+PIN  19 =  L5 
+PIN  18 =  L6 
+PIN  17 =  L7 
+PIN  16 =  L8 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+L1 =>
+    !A0 & !A1 & !A2 & A3
+
+L2 =>
+    !A0 & !A1 & A2 & !A3
+
+L3 =>
+    !A0 & !A1 & A2 & A3
+
+L4 =>
+    !A0 & A1 & !A2 & !A3
+
+L5 =>
+    !A0 & A1 & !A2 & A3
+
+L6 =>
+    !A0 & A1 & A2 & !A3
+
+L7 =>
+    !A0 & A1 & A2 & A3
+
+L8 =>
+    A0 & !A1 & !A2 & !A3
+
+L1.oe  =>
+    1 
+
+L2.oe  =>
+    1 
+
+L3.oe  =>
+    1 
+
+L4.oe  =>
+    1 
+
+L5.oe  =>
+    1 
+
+L6.oe  =>
+    1 
+
+L7.oe  =>
+    1 
+
+L8.oe  =>
+    1 
+
+%END
